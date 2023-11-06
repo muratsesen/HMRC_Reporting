@@ -1,0 +1,87 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Header>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" env:mustUnderstand="1">
+      <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="Id-oaPL_yfUam7AbRscGR_cnCQz">
+        <wsse:Username>ATWDTrader01</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">fGuR34fAOEJf</wsse:Password>
+      </wsse:UsernameToken>
+    </wsse:Security>
+    <info:hmrcInfo xmlns:info="http://www.govtalk.gov.uk/hmrcinfo/">    <info:VendorDetails>
+      <info:VendorIdentity>
+        <info:VendorName>Metacask</info:VendorName>
+        <info:VendorURI>metacask.com</info:VendorURI>
+        <info:VendorID>123123</info:VendorID>
+      </info:VendorIdentity>
+      <info:VendorProduct>
+        <info:VendorProductName>trackr</info:VendorProductName>
+        <info:VendorProductVersion>1.0</info:VendorProductVersion>
+      </info:VendorProduct>
+    </info:VendorDetails>
+</info:hmrcInfo>
+  </env:Header>
+  <env:Body>
+<n1:submitW1Declaration xmlns:n1="http://webservices.hmrc.gov.uk/ws/atwd/28022008">
+	&lt;WarehouseReturn xmlns="http://www.govtalk.gov.uk/atwd/WarehouseReturn/02102007" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+		&lt;warehouseID&gt;GB00000000002&lt;/warehouseID&gt;
+		&lt;periodStartDate&gt;2008-10-01&lt;/periodStartDate&gt;
+		&lt;periodEndDate&gt;2008-10-31&lt;/periodEndDate&gt;
+		&lt;currencyCode&gt;GBP&lt;/currencyCode&gt;
+
+		&lt;Products&gt;
+        &lt;Alcohol&gt;
+            &lt;productType&gt;whisky&lt;/productType&gt;
+            
+            &lt;PeriodOpeningStock&gt;
+                &lt;Quantity&gt;
+                    &lt;cases&gt;10&lt;/cases&gt;
+                    &lt;casks&gt;10&lt;/casks&gt;
+                    &lt;litres&gt;1.00&lt;/litres&gt;
+                &lt;/Quantity&gt;
+            &lt;/PeriodOpeningStock&gt;
+
+            <!--Adjustment-->
+            <!--Receipts-->
+            
+            &lt;Removals&gt;
+                
+                &lt;Removal&gt;
+                    &lt;alcoholRemovalType&gt;removalsToHomeUse&lt;/alcoholRemovalType&gt;
+                    &lt;Quantity&gt;
+                        &lt;cases&gt;0&lt;/cases&gt;
+                        &lt;casks&gt;0&lt;/casks&gt;
+                        &lt;litres&gt;1.00&lt;/litres&gt;
+                    &lt;/Quantity&gt;
+                &lt;/Removal&gt;
+
+                &lt;Removal&gt;
+                    &lt;alcoholRemovalType&gt;removalsToExportation&lt;/alcoholRemovalType&gt;
+                    &lt;Quantity&gt;
+                        &lt;cases&gt;0&lt;/cases&gt;
+                        &lt;casks&gt;0&lt;/casks&gt;
+                        &lt;litres&gt;1.00&lt;/litres&gt;
+                    &lt;/Quantity&gt;
+                &lt;/Removal&gt;
+
+            &lt;/Removals&gt;
+
+            
+            &lt;PeriodClosingStock&gt;
+                &lt;Quantity&gt;
+                    &lt;cases&gt;0&lt;/cases&gt;
+                    &lt;casks&gt;0&lt;/casks&gt;
+                    &lt;litres&gt;0.00&lt;/litres&gt;
+                &lt;/Quantity&gt;
+            &lt;/PeriodClosingStock&gt;
+
+        &lt;/Alcohol&gt;
+&lt;/Products&gt;
+		<!--#OutstandingAADs#-->
+		<!--#ReturnedShortageAADs#-->
+		<!--#OutstandingW8s#-->
+		<!--#ReturnedShortageW8s#-->
+		<!--#CeasedOwners#-->
+		
+	&lt;/WarehouseReturn&gt;
+</n1:submitW1Declaration>
+  </env:Body>
+</env:Envelope>

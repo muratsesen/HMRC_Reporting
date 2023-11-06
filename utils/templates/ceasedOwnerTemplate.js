@@ -1,0 +1,1 @@
+export const ceasedOwnerTemplate = `&lt;ceasedOwner&gt;#ceasedOwner#&lt;/ceasedOwner&gt;`

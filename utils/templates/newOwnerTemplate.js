@@ -1,0 +1,1 @@
+export const newOwnerTemplate = `<newOwner>#newOwner#</newOwner>`
